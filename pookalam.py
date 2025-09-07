@@ -43,16 +43,6 @@ def square_looping(size, color="white", angle=0):
     t.goto(start_pos)
     t.end_fill()
 
-def line(size, color="white", angle=0):
-    t.penup()  # go to center
-    t.setheading(angle)  # set tilt angle
-    t.pendown()
-    t.color(color)
-    for _ in range(4):
-        t.goto(0, 0)
-        t.forward(size)
-        t.left(90)
-
 def square(size, color="black"):
     t.speed(0)
     t.penup()
@@ -84,25 +74,21 @@ def flower(radius=100, color="red", angle=0):
 for angle in range(0,360,12):
     square_looping(200,"gold",angle=angle)
 for angle in range(0,360,12):
+    square_looping(195,"orange",angle=angle)
+for angle in range(0,360,12):
   square_looping(190,"yellow",angle=angle)
 flower(250,"green")
 circle_center(225,360,12,"orange")
+circle_center(220,360,12,"gold")
 circle_center(200,color="red")
 circle_center(175,360,12,"white")
 flower(165,"green")
-circle_center(150,color="purple")
+circle_center(140,color="purple")
 for angle in range(0,360,12):
-    square_looping(100,"pink",angle)
+    square_looping(95,"magenta",angle)
+for angle in range(0,360,12):
+    square_looping(90,"pink",angle)
 flower(105,"orange")
-#for angle in range(0,360,12):
-    #square_looping(75,"pink",angle)
 flower(95,"gold")
 flower(75,"red")
 turtle.done()
-#circle_center(60,color="orange")
-#circle_center(40,color="white")
-#for angle in range(0,360,8):
-    #square_looping(25,"violet",angle)
-#for angle in range(0,360,12):
-    #square_looping(15,"purple",angle)
-
