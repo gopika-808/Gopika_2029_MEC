@@ -42,34 +42,18 @@ def square_looping(size, color="white", angle=0):
         t.left(90)
     t.goto(start_pos)
     t.end_fill()
-
-def square(size, color="black"):
-    t.speed(0)
-    t.penup()
-    # move to bottom-left corner so square is centered at (0,0)
-    t.goto(-size/2, -size/2)
-    t.pendown()
-    t.color(color)
-    t.begin_fill()
-    for _ in range(4):
-        t.forward(size)
-        t.left(90)
-    t.end_fill()
-
+    
 def flower(radius=100, color="red", angle=0):
     t.color(color)
     t.setheading(angle)
     t.begin_fill()
 
-    for _ in range(12):   # 8 petals
-        t.circle(radius, 60)   # draw an arc (smooth curve)
-        t.left(120)            # turn back
-        t.circle(radius, 60)   # mirror arc
-        t.left(90)             # spacing for next petal (360° / 8)
-
-    t.end_fill()
-
-
+    for _ in range(12):   
+        t.circle(radius, 60)  
+        t.left(120)           
+        t.circle(radius, 60)   
+        t.left(90)             
+     t.end_fill()
 
 for angle in range(0,360,12):
     square_looping(200,"gold",angle=angle)
@@ -91,4 +75,6 @@ for angle in range(0,360,12):
 flower(105,"orange")
 flower(95,"gold")
 flower(75,"red")
+
 turtle.done()
+
